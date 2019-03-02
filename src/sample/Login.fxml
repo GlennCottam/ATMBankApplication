@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<?import javafx.scene.text.Text?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.Controller"
+            prefHeight="400.0" prefWidth="600.0">
+    <stylesheets>
+        <URL value="@main.css"></URL>
+    </stylesheets>
+    <top>
+        <BorderPane styleClass="header-section">
+            <center>
+                <Label styleClass="header-text" text="ATM Bank Login"></Label>
+            </center>
+        </BorderPane>
+    </top>
+    <center>
+        <GridPane styleClass="body-section"
+                  alignment="center" hgap="10" vgap="10"
+        >
+            <gridLinesVisible>false</gridLinesVisible>
+            <!--Account ID Label-->
+            <Label styleClass="text-light"
+                   alignment="CENTER"
+                   GridPane.columnIndex="0"
+                   GridPane.rowIndex="0"
+                   GridPane.columnSpan="1">
+                Account ID:
+            </Label>
+
+            <!--Text Feild for Account ID-->
+            <TextField fx:id="Account_ID_Field"
+                    GridPane.columnIndex="1"
+                    GridPane.rowIndex="0"
+                    promptText="Account ID"
+            >
+            </TextField>
+
+            <!--Password Label-->
+            <Label styleClass="text-light"
+                   alignment="CENTER"
+                   GridPane.columnIndex="0"
+                   GridPane.rowIndex="1"
+            >PIN:</Label>
+
+            <!--Password Field-->
+            <PasswordField fx:id="Password_Field"
+                    GridPane.columnIndex="1"
+                    GridPane.rowIndex="1"
+                    onAction="#Submit_Button_Handler"
+                    promptText="PIN"
+            ></PasswordField>
+
+            <!--Hbox for submit button-->
+            <HBox spacing="10" alignment="BOTTOM_RIGHT"
+                  GridPane.columnIndex="1"
+                  GridPane.rowIndex="2">
+                <Button styleClass="button" onAction="#Submit_Button_Handler" text="Sign In">Button</Button>
+            </HBox>
+
+            <!--Login Validator-->
+            <!--Spits out text depending on if you where able to login or not-->
+            <Label  fx:id="Login_Validator"
+                    id="login_val"
+                    GridPane.columnIndex="0"
+                    GridPane.rowIndex="3"
+                    GridPane.columnSpan="2"
+                    text=""
+            ></Label>
+        </GridPane>
+    </center>
+    <bottom>
+        <!--Footer-->
+        <BorderPane styleClass="footer-section">
+            <center>
+                <Label styleClass="footer-text" text="Copyright 2019"></Label>
+            </center>
+        </BorderPane>
+    </bottom>
+</BorderPane>
