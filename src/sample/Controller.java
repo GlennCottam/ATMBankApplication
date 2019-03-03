@@ -27,8 +27,7 @@ public class Controller {
 
         if (Account_ID.equals("Admin") && Password.equals("1234"))
         {
-            Login_Validator.setText("Login is Valid!");
-            System.out.println("Login Successful");
+            System.out.println("Login Accepted, switching to SelectionScreen.fxml");
 
             // Sets new Stage
             SceneSwitcher.root = FXMLLoader.load(getClass().getResource("SelectionScreen.fxml"));
@@ -41,7 +40,5 @@ public class Controller {
             Login_Validator.setText("Either Account ID or Pin is incorrect.");
             System.out.println("Login Failed");
         }
-
-        System.out.println("-------------------");
     }
 }

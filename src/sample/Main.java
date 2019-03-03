@@ -15,7 +15,8 @@ public class Main extends Application {
         window = primaryStage;
 
         // Grabs starting UI element
-        Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+        // To start at the start point of the application, set it to Login.fxml
+        Parent root = FXMLLoader.load(getClass().getResource("Withdraw.fxml"));
 
         // Sets title
         primaryStage.setTitle("ATM Banking");

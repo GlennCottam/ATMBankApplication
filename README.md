@@ -29,14 +29,18 @@ ATM bank application for Software Engineering COMP 2663.
 ├── ATMBankApplication.iml
 ├── README.md                   // What your reading now
 ├── out                         // Dont Worry About This
-└── src
-    └── sample                  // Main Package
+└── src                         // Main Package
+    └── sample
         ├── Controller.java     // Controls the UI Application (UI ins and outs)
         ├── Login.fxml          // Starting point in UI
         ├── Main.java           // Main java file that creates the UI
+        ├── SceneSwitcher.java  // Adds ability to switch to a different scene faster
+        ├── SelectionScreen.fxml   // Main Switcher, #2 screen (UI)
+        ├── SelectionScreen.java   // Main Switcher, #2 screen (Java) 
+        ├── Withdraw.fxml       // Withdraw interface, #3 screen (UI)
+        ├── Withdraw.java       // Withdraw interface, #3 screen (Java)
         ├── main.css            // Style Sheet for the UI
         └── sample.fxml         // Test UI File (disregard)
 
-6 directories, 12 files
+6 directories, 22 files
 ```
-

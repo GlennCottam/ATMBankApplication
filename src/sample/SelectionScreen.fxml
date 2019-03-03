@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import java.net.URL?>
@@ -29,6 +25,8 @@
                   alignment="center" hgap="10" vgap="10">
             <gridLinesVisible>false</gridLinesVisible>
             <Button text="Withdraw"
+                    fx:id="Withdraw_Button"
+                    onAction="#WithdrawButtonHandle"
                     prefWidth="200"
                     prefHeight="50"
                     GridPane.columnIndex="0"
@@ -36,6 +34,8 @@
                     GridPane.columnSpan="1">
             </Button>
             <Button text="Deposit"
+                    fx:id="Deposit_Button"
+                    onAction="#DepositButtonHandle"
                     prefWidth="200"
                     prefHeight="50"
                     GridPane.columnIndex="0"
@@ -43,28 +43,29 @@
                     GridPane.columnSpan="1">
             </Button>
             <Button text="Check Balance"
+                    fx:id="Check_Balance"
+                    onAction="#CheckBalanceHandle"
                     prefWidth="200"
                     prefHeight="50"
                     GridPane.columnIndex="0"
                     GridPane.rowIndex="2"
                     GridPane.columnSpan="1">
             </Button>
-            <Button text="Exit"
-                    styleClass="bg-error"
-                    prefWidth="200"
-                    prefHeight="50"
-                    GridPane.columnIndex="0"
-                    GridPane.rowIndex="3"
-                    GridPane.columnSpan="1">
-            </Button>
+
         </GridPane>
     </center>
     <bottom>
         <!--Footer-->
         <BorderPane styleClass="footer-section">
-            <center>
-                <Label styleClass="footer-text" text="Copyright 2019"></Label>
-            </center>
+            <left>
+                <Button text="Logout"
+                        fx:id="Exit_Button"
+                        onAction="#ExitButtonHandle"
+                        styleClass="bg-error"
+                        prefWidth="100"
+                        prefHeight="25">
+                </Button>
+            </left>
         </BorderPane>
     </bottom>
 </BorderPane>

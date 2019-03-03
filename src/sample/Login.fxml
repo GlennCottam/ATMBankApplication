@@ -74,12 +74,4 @@
             ></Label>
         </GridPane>
     </center>
-    <bottom>
-        <!--Footer-->
-        <BorderPane styleClass="footer-section">
-            <center>
-                <Label styleClass="footer-text" text="Copyright 2019"></Label>
-            </center>
-        </BorderPane>
-    </bottom>
 </BorderPane>
