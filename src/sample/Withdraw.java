@@ -30,7 +30,9 @@ public class Withdraw {
     // Continue button handler
     @FXML protected void ContinueButtonHandle() throws Exception
     {
-        System.out.println("Switching to FXML/Confirmation.fxml");
+        Confirmation.Previous_Scene_Name = "FXML/Withdraw.fxml";
+        Confirmation.Amount_Value = Integer.parseInt(Text_Field_Amount.getText());
+        Confirmation.Action_Value = "Withdraw";
         scene.SwitchToScene("FXML/Confirmation.fxml");
 
     }

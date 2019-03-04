@@ -51,7 +51,6 @@
                     GridPane.rowIndex="2"
                     GridPane.columnSpan="1">
             </Button>
-
         </GridPane>
     </center>
     <bottom>

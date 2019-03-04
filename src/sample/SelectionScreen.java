@@ -18,27 +18,25 @@ public class SelectionScreen {
     @FXML protected void WithdrawButtonHandle() throws Exception
     {
         // Switches to Withdraw Screen
-        System.out.println("Switching to FXML/Withdraw.fxml");
         scene.SwitchToScene("FXML/Withdraw.fxml");
     }
 
-    @FXML protected void DepositButtonHandle()
+    @FXML protected void DepositButtonHandle() throws Exception
     {
         // Switches to Deposit Screen
-        System.out.println("Switching to FXML/Deposit.fxml");
+        scene.SwitchToScene("FXML/Deposit.fxml");
     }
 
-    @FXML protected void CheckBalanceHandle()
+    @FXML protected void CheckBalanceHandle() throws Exception
     {
         // Switches to Deposit Screen
-        System.out.println("Switching to FXML/CheckBalance.fxml");
+        scene.SwitchToScene("FXML/CheckBalance.fxml");
     }
 
     // Handles the Exit Button
     @FXML protected void ExitButtonHandle() throws Exception
     {
         // Switches back to Login Screen
-        System.out.println("Switching to FXML/Login.fxml");
         scene.SwitchToScene("FXML/Login.fxml");
     }
 

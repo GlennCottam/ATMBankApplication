@@ -25,8 +25,8 @@
         <GridPane alignment="CENTER" hgap="10" vgap="10" maxWidth="200">
             <gridLinesVisible>false</gridLinesVisible>
             <!--Grid Row 1-->
-            <Label minWidth="75" textAlignment="CENTER" alignment="CENTER" styleClass="bg-gray" GridPane.rowIndex="0" GridPane.columnIndex="0">Action</Label>
-            <TextField fx:id="Amount_Field" GridPane.rowIndex="0" GridPane.columnIndex="1" promptText="amount" editable="false"></TextField>
+            <Label fx:id="Action_Label" minWidth="100" textAlignment="CENTER" alignment="CENTER" styleClass="bg-gray" GridPane.rowIndex="0" GridPane.columnIndex="0">Action</Label>
+            <Label fx:id="Amount_Field" minWidth="100" textAlignment="CENTER" alignment="CENTER" styleClass="bg-gray" GridPane.rowIndex="0" GridPane.columnIndex="1">Amount</Label>
 
             <!--Grid Row 2-->
             <Button onAction="#ContinueButtonHandle" alignment="CENTER" prefWidth="Infinity" prefHeight="50" GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.columnSpan="2" styleClass="bg-success">Continue</Button>

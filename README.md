@@ -6,16 +6,16 @@ ATM bank application for Software Engineering COMP 2663.
 - Created a few GUI screens (see below for details on progress)
 - File Restructure
     - Sent all fxml files to FXML directory for easier management (included css file)
-## Preperation and Information:
+## Preparation and Information:
 
 ### JDK Version:
 - Java 8 JDK: https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 
 
 ### IDE
-- (Recommened) Intillij IDEA: https://www.jetbrains.com/idea/download/index.html#section=windows
+- (Recommended) Intillij IDEA: https://www.jetbrains.com/idea/download/index.html#section=windows
 - Other text-editor (vs-code, sublime, atom, etc...)
-- (Not Recommened) Other IDE (Eclipse, etc...)
+- (Not Recommended) Other IDE (Eclipse, etc...)
 
 ## Installation Process
 1. Install JDK first (use link above)
@@ -28,9 +28,9 @@ ATM bank application for Software Engineering COMP 2663.
 ## Current File Structure and Notes
 
 ```
-├── ATMBankApplication.iml
+├── ATMBankApplication.iml                       // Something to do with IntelliJ IDEA
 ├── Gimp Files
-│   └── Application Icon.xcf
+│   └── Application Icon.xcf                     // Icon Gimp File
 ├── README.md                                    // What your reading now
 ├── out
 │   ├── artifacts
@@ -44,8 +44,12 @@ ATM bank application for Software Engineering COMP 2663.
     └── sample
         ├── Confirmation.java
         ├── Controller.java                     // Controls the UI Application (UI ins and outs)
+        ├── CheckBalance.java                   // Handler for Check Balance
+        ├── Deposit.java                        // Handler for Deposit
         ├── FXML                                // All FXML files (UI)
+        │   ├── CheckBalance.fxml               // Checks the users Balance (Local) (UI)
         │   ├── Confirmation.fxml               // Confirmation from user (Y/n)
+        │   ├── Deposit.fxml                    // Sends money to account (UI)
         │   ├── Login.fxml                      // Starting point in UI
         │   ├── SelectionScreen.fxml            // Main Switcher, #2 screen (UI)
         │   ├── TransactionSuccess.fxml         // Simple success (UI)
@@ -62,5 +66,5 @@ ATM bank application for Software Engineering COMP 2663.
             └── icon.png                        // Icon for the main window
 
 
-15 directories, 40 files
+15 directories, 44 files
 ```

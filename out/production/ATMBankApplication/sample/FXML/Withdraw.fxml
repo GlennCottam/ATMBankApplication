@@ -38,10 +38,19 @@
     <center>
         <GridPane alignment="CENTER" hgap="0" vgap="0">
             <gridLinesVisible>false</gridLinesVisible>
-            <Text textAlignment="CENTER" GridPane.rowIndex="0" GridPane.columnIndex="1" GridPane.columnSpan="1">Please Select Amount You Would Like to Withdraw</Text>
-            <Label styleClass="bg-gray" GridPane.rowIndex="1" GridPane.columnIndex="0">$</Label>
-            <TextField fx:id="Text_Field_Amount" GridPane.rowIndex="1" GridPane.columnIndex="1" promptText="Amount"></TextField>
-            <Label styleClass="bg-gray" GridPane.rowIndex="1" GridPane.columnIndex="2">.00</Label>
+            <columnConstraints><ColumnConstraints halignment="CENTER"></ColumnConstraints></columnConstraints>
+            <Text textAlignment="CENTER" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="1">Please Select Amount You Would Like to Withdraw</Text>
+            <BorderPane GridPane.rowIndex="1" maxWidth="200" BorderPane.alignment="CENTER">
+                <left>
+                    <Label styleClass="bg-gray">$</Label>
+                </left>
+                <center>
+                    <TextField fx:id="Text_Field_Amount" promptText="Amount" onAction="#ContinueButtonHandle"></TextField>
+                </center>
+                <right>
+                    <Label styleClass="bg-gray">.00</Label>
+                </right>
+            </BorderPane>
         </GridPane>
     </center>
     <right>

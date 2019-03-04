@@ -7,39 +7,25 @@
 <?import javafx.scene.layout.*?>
 <?import java.net.URL?>
 
-
 <?import javafx.scene.text.Text?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="sample.Withdraw"
+            fx:controller="sample.Deposit"
             prefHeight="400.0" prefWidth="600.0">
-    <stylesheets>
-        <URL value="@main.css"></URL>
-    </stylesheets>
+    <stylesheets><URL value="@main.css"></URL></stylesheets>
     <!--Header-->
     <top>
         <BorderPane styleClass="header-section">
             <center>
-                <Label styleClass="header-text" text="Withdraw"></Label>
+                <Label styleClass="header-text">Deposit</Label>
             </center>
         </BorderPane>
     </top>
-    <!--Button Set 1-->
-    <left>
-        <GridPane alignment="CENTER_LEFT" hgap="10" vgap="10" styleClass="button_group">
-            <gridLinesVisible>false</gridLinesVisible>
-            <Button onAction="#AmountButtonHandle" userData="20" GridPane.rowIndex="0" prefWidth="160" prefHeight="90">$20</Button>
-            <Button onAction="#AmountButtonHandle" userData="40" GridPane.rowIndex="1" prefWidth="160" prefHeight="90">$40</Button>
-            <Button onAction="#AmountButtonHandle" userData="60" GridPane.rowIndex="2" prefWidth="160" prefHeight="90">$60</Button>
-            <Button onAction="#AmountButtonHandle" userData="80" GridPane.rowIndex="3" prefWidth="160" prefHeight="90">$80</Button>
-            <Button onAction="#AmountButtonHandle" userData="100" GridPane.rowIndex="4" prefWidth="160" prefHeight="90">$100</Button>
-        </GridPane>
-    </left>
     <center>
         <GridPane alignment="CENTER" hgap="0" vgap="0">
             <gridLinesVisible>false</gridLinesVisible>
             <columnConstraints><ColumnConstraints halignment="CENTER"></ColumnConstraints></columnConstraints>
-            <Text textAlignment="CENTER" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="1">Please Select Amount You Would Like to Withdraw</Text>
+            <Text textAlignment="CENTER" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="1">Please Enter Amount You Would Like to Deposit</Text>
             <BorderPane GridPane.rowIndex="1" maxWidth="200" BorderPane.alignment="CENTER">
                 <left>
                     <Label styleClass="bg-gray">$</Label>
@@ -53,22 +39,12 @@
             </BorderPane>
         </GridPane>
     </center>
-    <right>
-        <GridPane alignment="CENTER_RIGHT" hgap="10" vgap="10" styleClass="button_group">
-            <gridLinesVisible>false</gridLinesVisible>
-            <Button onAction="#AmountButtonHandle" userData="120" GridPane.rowIndex="0" prefWidth="160" prefHeight="90">$120</Button>
-            <Button onAction="#AmountButtonHandle" userData="140" GridPane.rowIndex="1" prefWidth="160" prefHeight="90">$140</Button>
-            <Button onAction="#AmountButtonHandle" userData="160" GridPane.rowIndex="2" prefWidth="160" prefHeight="90">$160</Button>
-            <Button onAction="#AmountButtonHandle" userData="180" GridPane.rowIndex="3" prefWidth="160" prefHeight="90">$180</Button>
-            <Button onAction="#AmountButtonHandle" userData="200" GridPane.rowIndex="4" prefWidth="160" prefHeight="90">$200</Button>
-        </GridPane>
-    </right>
     <bottom>
         <!--Footer-->
         <BorderPane styleClass="footer-section">
             <left>
                 <GridPane styleClass="body-section"
-                alignment="center" hgap="10" vgap="10">
+                          alignment="center" hgap="10" vgap="10">
                     <Button text="Cancel"
                             fx:id="Back_Button"
                             onAction="#BackButtonHandle"
