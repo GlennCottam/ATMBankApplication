@@ -4,16 +4,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
-public class SceneSwitcher {
+public class SceneSwitcher implements SceneInterface
+{
 
-    // To Switch to new Scene:
-        // SceneSwitcher.root = FXMLLoader.load(getClass().getResource("fxml.fxml"));
-        // SceneSwitcher.SwitchToScene();
-
-    public static Parent root;
-
-    public static void SwitchToScene() throws Exception
+    public void SwitchToScene(String fxmlName) throws Exception
     {
+        Parent root = FXMLLoader.load(getClass().getResource(fxmlName));
         Main.window.setScene(new Scene(root, 900, 500));
     }
 }

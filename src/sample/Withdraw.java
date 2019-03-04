@@ -14,30 +14,41 @@ public class Withdraw {
     // Use this to get the proper withdraw amount.
     @FXML public int Withdraw_Amount;
 
+    private SceneInterface scene = new SceneSwitcher();
 
-    @FXML protected void AmountButtonHandle(ActionEvent event) throws Exception
+    // Handles all the buttons with amounts
+    // Grabs their data and parses them into an int
+    @FXML protected void AmountButtonHandle(ActionEvent event)
     {
-        Node node = (Node)event.getSource();
-        String data = (String)node.getUserData();
-        int amount = Integer.parseInt(data);
-        Withdraw_Amount = amount;
-        Text_Field_Amount.setText(data);
+        Node node = (Node)event.getSource();        // Gets userData
+        String data = (String)node.getUserData();   // Converts to string
+        int amount = Integer.parseInt(data);        // Parses to Int
+        Withdraw_Amount = amount;                   // Sets global variable
+        Text_Field_Amount.setText(data);            // Sets the text field with the button data
     }
 
-
-    @FXML protected void BackButtonHandle(ActionEvent event) throws Exception
+    // Continue button handler
+    @FXML protected void ContinueButtonHandle() throws Exception
     {
-        SceneSwitcher.root = FXMLLoader.load(getClass().getResource("SelectionScreen.fxml"));
-        System.out.println("Switching to SelectionScreen.fxml");
-        SceneSwitcher.SwitchToScene();
+        System.out.println("Switching to FXML/Confirmation.fxml");
+        scene.SwitchToScene("FXML/Confirmation.fxml");
+
+    }
+
+    // Back button Handler
+    // Just changes scenes to the selection screen
+    @FXML protected void BackButtonHandle() throws Exception
+    {
+        System.out.println("Switching to FXML/SelectionScreen.fxml");
+        scene.SwitchToScene("FXML/SelectionScreen.fxml");
     }
 
     // Handles the Exit Button
-    @FXML protected void ExitButtonHandle(ActionEvent event) throws Exception
+    // Just changes scenes to the Login screen
+    @FXML protected void ExitButtonHandle() throws Exception
     {
         // Switches back to Login Screen
-        SceneSwitcher.root = FXMLLoader.load(getClass().getResource("Login.fxml"));
-        System.out.println("Switching to Login.fxml");
-        SceneSwitcher.SwitchToScene();
+        System.out.println("Switching to FXML/Login.fxml");
+        scene.SwitchToScene("FXML/Login.fxml");
     }
 }

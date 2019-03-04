@@ -12,35 +12,34 @@ public class SelectionScreen {
     @FXML private Button Check_Balance;
     @FXML private Button Exit_Button;
 
+    private SceneInterface scene = new SceneSwitcher();
 
-    @FXML protected void WithdrawButtonHandle(ActionEvent event) throws Exception
+
+    @FXML protected void WithdrawButtonHandle() throws Exception
     {
         // Switches to Withdraw Screen
-        System.out.println("Switching to Withdraw.fxml");
-        SceneSwitcher.root = FXMLLoader.load(getClass().getResource("Withdraw.fxml"));
-        SceneSwitcher.SwitchToScene();
+        System.out.println("Switching to FXML/Withdraw.fxml");
+        scene.SwitchToScene("FXML/Withdraw.fxml");
     }
 
-    @FXML protected void DepositButtonHandle(ActionEvent event)
+    @FXML protected void DepositButtonHandle()
     {
         // Switches to Deposit Screen
-        System.out.println("Switching to Deposit.fxml");
+        System.out.println("Switching to FXML/Deposit.fxml");
     }
 
-    @FXML protected void CheckBalanceHandle(ActionEvent event)
+    @FXML protected void CheckBalanceHandle()
     {
         // Switches to Deposit Screen
-        System.out.println("Switching to CheckBalance.fxml");
+        System.out.println("Switching to FXML/CheckBalance.fxml");
     }
-
 
     // Handles the Exit Button
-    @FXML protected void ExitButtonHandle(ActionEvent event) throws Exception
+    @FXML protected void ExitButtonHandle() throws Exception
     {
         // Switches back to Login Screen
-        SceneSwitcher.root = FXMLLoader.load(getClass().getResource("Login.fxml"));
-        System.out.println("Switching to Login.fxml");
-        SceneSwitcher.SwitchToScene();
+        System.out.println("Switching to FXML/Login.fxml");
+        scene.SwitchToScene("FXML/Login.fxml");
     }
 
 }

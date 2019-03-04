@@ -83,9 +83,9 @@
                 </GridPane>
             </left>
             <right>
-                <GridPane
-                          alignment="center" hgap="10" vgap="10">
+                <GridPane alignment="center" hgap="10" vgap="10">
                     <Button text="Continue"
+                            onAction="#ContinueButtonHandle"
                             styleClass="bg-success"
                             prefWidth="100"
                             prefHeight="25"

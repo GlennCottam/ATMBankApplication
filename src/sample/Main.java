@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -16,10 +17,13 @@ public class Main extends Application {
 
         // Grabs starting UI element
         // To start at the start point of the application, set it to Login.fxml
-        Parent root = FXMLLoader.load(getClass().getResource("Withdraw.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("FXML/Login.fxml"));
 
         // Sets title
-        primaryStage.setTitle("ATM Banking");
+        primaryStage.setTitle("ATM Banking Application");
+
+        // Sets icon
+        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("images/icon.png")));
 
         // Creates scene (900px*500px)
         primaryStage.setScene(new Scene(root, 900, 500));
