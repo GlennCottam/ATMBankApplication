@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import java.net.URL?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="FrontEnd.CheckBalance"
+            prefHeight="400.0" prefWidth="600.0">
+    <stylesheets><URL value="@light-green.css"></URL></stylesheets>
+    <!--Header-->
+    <top>
+        <BorderPane styleClass="header-section">
+            <center>
+                <Label styleClass="header-text">Check Balance</Label>
+            </center>
+        </BorderPane>
+    </top>
+    <!--Body-->
+    <center>
+        <GridPane styleClass="body-section" alignment="center" hgap="10" vgap="10" maxWidth="300">
+            <gridLinesVisible>false</gridLinesVisible>
+            <Label fx:id="Balance_Label" GridPane.rowIndex="0" minWidth="300" textAlignment="CENTER" alignment="CENTER" styleClass="bg-gray">Balance</Label>
+        </GridPane>
+    </center>
+    <bottom>
+        <BorderPane styleClass="footer-section">
+            <left>
+                <GridPane hgap="10" vgap="10">
+                    <Button GridPane.columnIndex="0" onAction="#ExitButtonHandle" alignment="CENTER" prefWidth="100" prefHeight="25" styleClass="bg-error">Logout</Button>
+                    <Button GridPane.columnIndex="1" onAction="#BackButtonHandle" alignment="CENTER" prefWidth="100" prefHeight="25" styleClass="bg-warn">Back</Button>
+                </GridPane>
+            </left>
+            <right>
+            </right>
+        </BorderPane>
+    </bottom>
+</BorderPane>

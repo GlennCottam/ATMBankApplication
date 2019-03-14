@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="FrontEnd.SelectionScreen"
+            prefHeight="400.0" prefWidth="600.0">
+    <stylesheets>
+        <URL value="@light-green.css"></URL>
+    </stylesheets>
+    <!--Header-->
+    <top>
+        <BorderPane BorderPane.alignment="CENTER" styleClass="header-section">
+            <center>
+                <Label BorderPane.alignment="CENTER" styleClass="header-text" text="Please Select an Option"></Label>
+            </center>
+        </BorderPane>
+    </top>
+    <!--Body-->
+    <center>
+        <GridPane styleClass="body-section"
+                  alignment="center" hgap="10" vgap="10">
+            <gridLinesVisible>false</gridLinesVisible>
+            <Button text="Withdraw"
+                    onAction="#WithdrawButtonHandle"
+                    prefWidth="200"
+                    prefHeight="50"
+                    GridPane.columnIndex="0"
+                    GridPane.rowIndex="0"
+                    GridPane.columnSpan="1">
+            </Button>
+            <Button text="Deposit"
+                    onAction="#DepositButtonHandle"
+                    prefWidth="200"
+                    prefHeight="50"
+                    GridPane.columnIndex="0"
+                    GridPane.rowIndex="1"
+                    GridPane.columnSpan="1">
+            </Button>
+            <Button text="Check Balance"
+                    onAction="#CheckBalanceHandle"
+                    prefWidth="200"
+                    prefHeight="50"
+                    GridPane.columnIndex="0"
+                    GridPane.rowIndex="2"
+                    GridPane.columnSpan="1">
+            </Button>
+        </GridPane>
+    </center>
+    <bottom>
+        <!--Footer-->
+        <BorderPane styleClass="footer-section">
+            <left>
+                <Button text="Logout"
+                        onAction="#ExitButtonHandle"
+                        styleClass="bg-error"
+                        prefWidth="100"
+                        prefHeight="25">
+                </Button>
+            </left>
+        </BorderPane>
+    </bottom>
+</BorderPane>

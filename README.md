@@ -64,7 +64,6 @@ ATM bank application for Software Engineering COMP 2663.
         ├── Withdraw.java                       // Withdraw handlers, #3 screen (Java)
         └── images
             └── icon.png                        // Icon for the main window
-
-
+ 
 15 directories, 44 files
 ```

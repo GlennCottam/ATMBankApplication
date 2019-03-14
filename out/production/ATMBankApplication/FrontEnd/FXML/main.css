@@ -1,0 +1,70 @@
+.root {
+    -fx-background-color: #FFFFFF;
+    -fx-font-size: 14px;
+    -fx-font-family: sans-serif;
+}
+
+.header-section {
+    -fx-padding: 10px;
+    -fx-font-size: 20px;
+    -fx-background-color: #00AAFF;
+}
+
+.button_group {
+    -fx-padding: 8px;
+}
+
+.header-text {
+    -fx-text-fill: #FFFFFF;
+}
+
+#login_val {
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: #FF0000;
+    -fx-padding: 8px;
+    -fx-background-radius: 4px;
+}
+
+.footer-section {
+    -fx-background-color: white;
+    -fx-padding: 10px;
+    -fx-font-size: 11px;
+}
+
+.footer-text {
+    -fx-text-fill: #000000;
+}
+
+.button {
+    -fx-background-color: #00AAFF;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-radius: 4px;
+}
+
+.text-light {
+    -fx-text-fill: #000000;
+}
+.text-submission {
+    -fx-text-fill: #000000;
+}
+
+.bg-error {
+    -fx-background-color: #FF0000;
+    -fx-text-fill: #FFFFFF;
+}
+
+.bg-warn {
+    -fx-background-color: #ff9900;
+    -fx-text-fill: #FFFFFF;
+}
+
+.bg-success {
+    -fx-background-color: green;
+}
+
+.bg-gray {
+    -fx-background-color: #DFDFDF;
+    -fx-text-fill: #000000;
+    -fx-padding: 6px;
+    -fx-background-radius: 4px;
+}

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<?import javafx.scene.text.Text?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="FrontEnd.Deposit"
+            prefHeight="400.0" prefWidth="600.0">
+    <stylesheets><URL value="@light-green.css"></URL></stylesheets>
+    <!--Header-->
+    <top>
+        <BorderPane styleClass="header-section">
+            <center>
+                <Label styleClass="header-text">Deposit</Label>
+            </center>
+        </BorderPane>
+    </top>
+    <center>
+        <GridPane alignment="CENTER" hgap="0" vgap="0">
+            <gridLinesVisible>false</gridLinesVisible>
+            <columnConstraints><ColumnConstraints halignment="CENTER"></ColumnConstraints></columnConstraints>
+            <Text textAlignment="CENTER" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="1">Please Enter Amount You Would Like to Deposit</Text>
+            <BorderPane GridPane.rowIndex="1" maxWidth="200" BorderPane.alignment="CENTER">
+                <left>
+                    <Label styleClass="bg-gray">$</Label>
+                </left>
+                <center>
+                    <TextField fx:id="Text_Field_Amount" promptText="Amount" onAction="#ContinueButtonHandle"></TextField>
+                </center>
+                <right>
+                    <Label styleClass="bg-gray">.00</Label>
+                </right>
+            </BorderPane>
+        </GridPane>
+    </center>
+    <bottom>
+        <!--Footer-->
+        <BorderPane styleClass="footer-section">
+            <left>
+                <GridPane styleClass="body-section"
+                          alignment="center" hgap="10" vgap="10">
+                    <Button text="Back"
+                            onAction="#BackButtonHandle"
+                            styleClass="bg-warn"
+                            prefWidth="100"
+                            prefHeight="25"
+                            GridPane.columnIndex="1"
+                            GridPane.rowIndex="0"
+                            GridPane.columnSpan="1">
+                    </Button>
+                    <Button text="Logout"
+                            onAction="#ExitButtonHandle"
+                            styleClass="bg-error"
+                            prefWidth="100"
+                            prefHeight="25"
+                            GridPane.columnIndex="0"
+                            GridPane.rowIndex="0"
+                            GridPane.columnSpan="1">
+                    </Button>
+                </GridPane>
+            </left>
+            <right>
+                <GridPane alignment="center" hgap="10" vgap="10">
+                    <Button text="Continue"
+                            onAction="#ContinueButtonHandle"
+                            styleClass="bg-success"
+                            prefWidth="100"
+                            prefHeight="25"
+                            GridPane.columnIndex="1"
+                            GridPane.rowIndex="0"
+                            GridPane.columnSpan="1">
+                    </Button>
+                </GridPane>
+            </right>
+        </BorderPane>
+    </bottom>
+</BorderPane>

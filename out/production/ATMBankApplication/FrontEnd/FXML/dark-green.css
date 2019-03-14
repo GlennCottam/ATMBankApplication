@@ -1,0 +1,59 @@
+.root {
+    -fx-background-color: #232323;
+    -fx-font-size: 14px;
+    -fx-font-family: sans-serif;
+}
+.header-section {
+    -fx-padding: 10px;
+    -fx-font-size: 20px;
+    -fx-background-color: #008800;
+}
+
+.header-text {
+    -fx-text-fill: #FFFFFF;
+}
+
+Label {
+    -fx-text-fill: #FFFFFF;
+}
+
+.button {
+    -fx-background-color: #008800;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-radius: 0px;
+}
+
+#login_val {
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: #FF0000;
+    -fx-padding: 8px;
+    -fx-background-radius: 4px;
+}
+
+.text-light {
+    -fx-text-fill: #000000;
+}
+.text-submission {
+    -fx-text-fill: #000000;
+}
+
+.bg-error {
+    -fx-background-color: #FF0000;
+    -fx-text-fill: #FFFFFF;
+}
+
+.bg-warn {
+    -fx-background-color: #ff9900;
+    -fx-text-fill: #FFFFFF;
+}
+
+.bg-success {
+    -fx-background-color: green;
+}
+
+.bg-gray {
+    -fx-background-color: #DFDFDF;
+    -fx-text-fill: #000000;
+    -fx-padding: 6px;
+    -fx-background-radius: 4px;
+}

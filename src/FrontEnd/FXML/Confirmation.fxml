@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="FrontEnd.Confirmation"
+            prefHeight="400.0" prefWidth="600.0">
+    <stylesheets>
+        <URL value="@light-green.css"></URL>
+    </stylesheets>
+    <top>
+        <BorderPane styleClass="header-section">
+            <center>
+                <Label styleClass="header-text">Confirm Transaction</Label>
+            </center>
+        </BorderPane>
+    </top>
+    <center>
+        <GridPane alignment="CENTER" hgap="10" vgap="10" maxWidth="200">
+            <gridLinesVisible>false</gridLinesVisible>
+            <!--Grid Row 1-->
+            <Label fx:id="Action_Label" minWidth="100" textAlignment="CENTER" alignment="CENTER" styleClass="bg-gray" GridPane.rowIndex="0" GridPane.columnIndex="0">Action</Label>
+            <Label fx:id="Amount_Field" minWidth="100" textAlignment="CENTER" alignment="CENTER" styleClass="bg-gray" GridPane.rowIndex="0" GridPane.columnIndex="1">Amount</Label>
+        </GridPane>
+    </center>
+    <bottom>
+        <BorderPane styleClass="footer-section">
+            <left>
+                <GridPane hgap="10" vgap="10">
+                    <Button onAction="#ExitButtonHandle" alignment="CENTER" prefWidth="100" prefHeight="25" GridPane.columnIndex="0" styleClass="bg-error">Logout</Button>
+                    <Button onAction="#BackButtonHandle" alignment="CENTER" prefWidth="100" prefHeight="25" GridPane.columnIndex="1" styleClass="bg-warn">Back</Button>
+                </GridPane>
+            </left>
+            <right>
+                <Button onAction="#ContinueButtonHandle" alignment="CENTER" prefWidth="100" prefHeight="25" styleClass="bg-success">Continue</Button>
+            </right>
+        </BorderPane>
+    </bottom>
+</BorderPane>
