@@ -1,16 +1,26 @@
 package Main;
 
+import BackEnd.Reader;
+import BackEnd.Account;
+import java.util.ArrayList;
+
 public class UserData implements UserDataInterface
 {
+    private Reader r = new Reader();
+    private ArrayList<Account> Accounts = r.readAccountsFromCSV();
     private int balance = 0;
+    private String accountName = "";
 
     // Login function
     // Function is used to login to users account and edit their entry
-    public boolean LoginAttempt(String AccountID, String PIN)
+    public boolean LoginAttempt(String accountID, String PIN)
     {
-        if(AccountID.equals("Admin") && PIN.equals("1234"))
+        System.out.println(Accounts);
+        if(r.accountExists(accountID, PIN, Accounts))
         {
-            System.out.println("Logged in As:  " + AccountID);
+            System.out.println("Logged in As:  " + accountID);
+            balance = r.getBalance(accountID, Accounts);
+            accountName = accountID;
             return true;
         }
         else
@@ -24,12 +34,14 @@ public class UserData implements UserDataInterface
     public void withdraw(int value)
     {
         balance = balance - value;
+        r.updateCSV(Integer.toString(balance), accountName, Accounts);
     }
 
     // Function adds money to users balance
     public void deposit(int value)
     {
         balance = balance + value;
+        r.updateCSV(Integer.toString(balance), accountName, Accounts);
     }
 
     // Retrieves Balance as an INT

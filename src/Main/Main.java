@@ -25,7 +25,7 @@ public class Main extends Application
         window.setTitle("ATM Banking Application");
 
         // Sets icon
-        window.getIcons().add(new Image(getClass().getResourceAsStream("/FrontEnd/images/icon.png")));
+        window.getIcons().add(new Image(getClass().getResourceAsStream("/icon.png")));
 
         // Creates scene (900px*500px)
 //        window.setScene(MainScene);
